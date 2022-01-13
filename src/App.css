@@ -1,38 +1,309 @@
-.App {
-  text-align: center;
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/************ NAVBAR ****************/
+
+
+.navlink{
+  text-decoration: none;
+  color: #202020;
+  font-size: 14px;
+  padding: 5px 7px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.active{
+  color: #52A1FF;
+}
+.navlink:hover{
+  color: #52A1FF;
+}
+.spin-img{
+  margin: 8px;
+}
+.spin-text{
+  text-decoration: none;
+  color: #202020;
+  font-weight: 600;
+  font-size: 14px;
+}
+.switch{
+  width: 80px;
+  padding: 5px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+/***************Route Section***********/
+
+.route-main{
+  background-color: #3062D0;
+  color: #fff;
+}
+.route-coloumn{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+p{
+  margin: 0;
+}
+
+.route-box{
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
+}
+.route-head,.route-date{
+  font-weight: 100;
+  font-size: 12px;
+  padding-left: 10px;
+
+}
+.route-name{
+  font-weight: 600;
+  padding-left: 10px;
+}
+.route-hover:hover{
+  background-color: #4572D5;
+}
+.arrow-box,.button-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modify-button{
+  text-transform:uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 11px;
+  background-color: #1882FF;
+  font-size: 14px;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.modify-button:hover{
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+/************* BUS Summmary *************************/
+
+.summary-section{
+  padding-top: 25px;
+}
+.summary-flex{
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/************* BUS Summmary(SIDE BAR) *************************/
+
+.empty-bar{
+  background-color: #F3F3F3;
+  width: 230px;
+  height: 800px;
+  border-radius: 5px;
+  position: static;
+}
+
+/************* BUS Summmary(CONTENT) *************************/
+
+
+.summary-content{
+  margin-left: 20px;
+ 
+}
+.total-bus{
+  font-weight: 600;
+  display: inline-block;
+}
+.bus-list{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #F3F3F3;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 20px;
+  border-radius: 4px;
+
+}
+.bus-list div{
+width: 100%;
+border-right: 2px solid #F3F3F3;
+overflow: hidden;
+}
+.bus-list div:last-child{
+  border-right: none;
+}
+.bus-name{
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 0px 0px 4px;
+}
+.less,.greater{
+  width: 120px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buses{
+  font-size: 11px;
+  padding: 1px 0px 4px 4px;
+}
+
+
+/************* BUS Summmary(Categories) *************************/
+
+
+.categories{
+ margin-top: 15px;
+ display: flex;
+ flex-direction: row;
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+ border-radius: 4px;
+}
+.categories div{
+  width: 100%;
+}
+.categories-img,.categories-name{
+  display: inline-block;
+  padding: 9px 8px;
+  cursor: pointer;
+}
+.categories-name{
+  font-size: 14px;
+  font-weight: 500;
+}
+.selected-category{
+  background-color: #3884F7;
+  color: #fff;
+}
+
+
+
+
+/*****************ticket Details ***********/
+
+.ticket-details{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 4px;
+}
+.ticket-details div{
+  width: 100%;
+}
+.ticket-content{
+  padding: 14px 12px;
+}
+.seat-button{
+  float: right;
+  margin-top: 10px;
+
+  text-transform:uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  background-color: #1882FF;
+  font-size: 14px;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.seat-button:hover{
+  color: #fff;
+}
+
+
+
+/***********MEDIA QUERY **************/
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.navlink{
+    font-size: 12px;
+    padding: 2px 3px;
   }
 }
+
+@media only screen and (max-width: 991px) {
+  .empty-bar{
+    display: none;
+  }
+  .ticket-details{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ticket-details{
+    width: 100%;
+  }
+  .summary-content{
+    width: 100%;  
+  }
+  .direction-bus{
+    width: 200px;
+  }
+  .modify-button{
+    text-transform:uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 8px;
+    background-color: #1882FF;
+    font-size: 10px;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  .route-head,.route-date{
+    font-weight: 100;
+    font-size: 10px;
+    padding-left: 5px;
+  }
+  .route-name{
+    font-weight: 600;
+    padding-left: 5px;
+    font-size: 10px;
+  }
+  .summary-content{
+    margin-left: 0px; 
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .ticket-details{
+    width: 100%;
+  }
+  .summary-content{
+    width: 100%;  
+  }
+  .direction-bus{
+    width: 100px;
+  }
+}
+
+/**********************END*******************/
+
+
+
+
+
+
+
+
