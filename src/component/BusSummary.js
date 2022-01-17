@@ -89,7 +89,7 @@ const BusSummary = () => {
                </div>
                <div className='ticket-content'>
                    
-                   <p style={{fontWeight:'600',float:'right'}}>55</p>
+                   <p style={{fontWeight:'600',float:'right',lineHeight:'18px'}}>55</p>
                    <img src={money} alt="Money" style={{float:'right',marginBottom:'12px'}}/>
                    <div style={{marginTop:'40px'}}>
                    <p style={{fontSize:'11px',color:'#626262'}}>To</p>
